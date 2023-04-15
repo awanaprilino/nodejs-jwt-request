@@ -64,7 +64,7 @@ app.get("/jobs", auth, async (req, res) => {
     const response = await axios
       .get("http://dev3.dansmultipro.co.id/api/recruitment/positions.json", {
         params: {
-          page: req.query.page ?? 1,
+          page: req.query.page,
           description: req.query.description,
           location: req.query.location,
           full_time: req.query.full_time == "true" ? true : false,
